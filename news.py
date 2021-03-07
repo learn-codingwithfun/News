@@ -13,7 +13,7 @@ def speak(audio):
 
 
 def speak_news():
-    url = 'http://newsapi.org/v2/top-headlines?sources=the-times-of-india&apiKey=25a8ad340f8c4ef188f542223f3255c6'
+    url = 'http://newsapi.org/v2/top-headlines?sources=the-times-of-india&apiKey=#insert your api key'
     news = requests.get(url).text
     news_dict = json.loads(news)
     arts = news_dict['articles']
@@ -27,7 +27,7 @@ def speak_news():
         speak('Moving on the next news headline..')
     speak('These were the top headlines, Have a nice day Sir!!..')
 def getNewsUrl():
-    return 'http://newsapi.org/v2/top-headlines?sources=the-times-of-india&apiKey=25a8ad340f8c4ef188f542223f3255c6'
+    return 'http://newsapi.org/v2/top-headlines?sources=the-times-of-india&apiKey=#insert your api key'
 
 if __name__ == '__main__':
     speak_news()
